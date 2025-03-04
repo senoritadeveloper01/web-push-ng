@@ -1,0 +1,46 @@
+<div
+  [ngClass]="{
+    'd-flex justify-content-center align-items-start min-vh-100 overflow-auto':
+      !deviceDetectorService.isMobile()
+  }"
+>
+  <div [ngClass]="{ 'mt-2': !deviceDetectorService.isMobile() }">
+    <div class="card m-2 p-3">
+      <div class="card-header">Web Push NG - Info</div>
+      <div class="card-body">
+        <h4><span class="text-info">Saved Email for BE:</span> {{ email }}</h4>
+        <h4>
+          <span class="text-info">Saved DeviceID for BE:</span> {{ deviceId }}
+        </h4>
+      </div>
+      @if ((messagePayloadList || []).length > 0) {
+      <ul class="list-group list-group-flush py-2 web-push-list-container">
+        @for (payload of messagePayloadList; track payload.messageId; let i =
+        $index) {
+        <li class="list-group-item d-flex flex-column">
+          <div class="d-flex">
+            <span class="text-white bg-dark">&nbsp;{{ i + 1 }}&nbsp;</span>
+          </div>
+          <div class="d-flex">
+            <span class="text-success">Title:&nbsp;</span>
+            <span>{{ payload.notification?.title }}</span>
+          </div>
+          <div class="d-flex">
+            <span class="text-primary">Body:&nbsp;</span>
+            <span>{{ payload.notification?.body }}</span>
+          </div>
+          <div class="d-flex">
+            <span class="text-secondary">Icon:&nbsp;</span>
+            <span>{{ payload.notification?.image }}</span>
+          </div>
+        </li>
+        }
+      </ul>
+      } @else {
+      <ul class="list-group list-group-flush py-2">
+        <li class="list-group-item d-flex">No Message Arrived</li>
+      </ul>
+      }
+    </div>
+  </div>
+</div>

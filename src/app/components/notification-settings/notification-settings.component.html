@@ -1,0 +1,57 @@
+<div
+  [ngClass]="{
+    'd-flex justify-content-center': !deviceDetectorService.isMobile()
+  }"
+>
+  <div [ngClass]="{ 'mt-5': !deviceDetectorService.isMobile() }">
+    <div class="card m-2 p-3">
+      <div class="card-header">Web Push NG - Settings</div>
+      <div class="card-body">
+        <h5>
+          <span class="text-info">isBrowserPushSettingEnabled:&nbsp;</span>
+          {{ isBrowserPushSettingEnabled }}
+        </h5>
+        <h5>
+          <span class="text-info">browserPushPermission:&nbsp;</span>
+          {{ browserPushPermission }}
+        </h5>
+        <div
+          class="mb-5"
+          [ngClass]="{
+            'bg-light disabled':
+              isBrowserPushSettingEnabled === false ||
+              !['default', 'prompt', 'denied'].includes(browserPushPermission)
+          }"
+        >
+          <div class="d-flex align-items-center">
+            <div class="pr-3 text-success fw-bold">Enable Push:&nbsp;</div>
+            <div>
+              <label class="switch mb-0">
+                <input
+                  name="browserPushPermission"
+                  type="checkbox"
+                  [checked]="browserPushPermission === 'granted'"
+                  (change)="setPushPermission()"
+                />
+                <span></span>
+              </label>
+            </div>
+          </div>
+          @if(isBrowserPushSettingEnabled === false || !['default',
+          'prompt'].includes(browserPushPermission)) {
+          <div class="d-flex align-items-center pt-1">
+            <i class="fa-regular fa-circle-info fa-gray fa-normal"></i>
+            <span class="pl-1 s1-r text-secondary">
+              {{
+                isBrowserPushSettingEnabled === false
+                  ? "*No Browser Support"
+                  : "*Enable Permission From Browser"
+              }}
+            </span>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
