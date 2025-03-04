@@ -49,9 +49,9 @@ live-server ./dist/web-push-ng/browser --port=8085
 
 Firefox and Safari needs user interaction to grant for notification permission:
 
-<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshow-safari.png" width="500" />
+<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshot-safari.png" width="500" />
 
-<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshow-firefox.png" width="500" />
+<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshot-firefox.png" width="500" />
 
 Chrome requests for permission:
 
@@ -63,23 +63,23 @@ User grants permission and token is saved at the backend side:
 
 Push notification is sent when browser is not in focus (background message):
 
-<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshow-03.png" width="500" />
+<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshot-03.png" width="500" />
 
 Background message received console log:
 
-<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshow-04.png" width="500" />
+<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshot-04.png" width="500" />
 
 Message received when browser is in focus (see last console log):
 
-<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshow-05.png" width="500" />
+<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshot-05.png" width="500" />
 
 All received notifications listed on page:
 
-<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshow-06.png" width="500" />
+<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshot-06.png" width="500" />
 
 Saved database records:
 
-<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshow-07.png" width="500" />
+<img src="https://raw.githubusercontent.com/senoritadeveloper01/web-push-ng/main/screenshots/web-push-ng-screenshot-07.png" width="500" />
 
 ## Contributors
 
